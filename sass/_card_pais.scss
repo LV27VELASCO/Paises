@@ -1,0 +1,120 @@
+@use 'variables' as v;
+
+.card__pais{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:40px;
+
+    &__information{
+        width: 100%;
+       display: flex;
+       flex-direction: column;
+       gap: 20px;
+    }
+
+    &__img{
+        width: 100%;
+        height: 250px;
+        &>img{
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    &__title{
+        font-size: 21px;
+        font-family: v.$Font-family-nunito;
+    }
+
+    &__information__extra{
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        font-family: v.$Font-family-nunito;
+    }
+
+    &__native{
+        display: grid;
+        gap: 10px;
+    }
+
+    &__laguages{
+        display:flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__borders{
+        font-family: v.$Font-family-nunito;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .contain__borders{
+        display: flex;
+        gap: 10px;
+    }
+
+    .border{
+        padding:2px 15px;
+        border-radius: 2px;
+        background-color: v.$Dark-Mode-Elements;
+        box-shadow: 0px 0px 5px 0px v.$Light-Mode-Text;
+    }
+
+    .link_border{
+        animation:pulse 2s infinite;
+    }
+
+    @media (min-width:1115px) {
+
+            flex-direction: row;
+            align-items: center;
+            gap: 90px;
+
+        &__information{
+                width: 70%;
+        }
+        
+         &__img{
+             width: 700px;
+             height: 350px;
+         }
+
+         &__information__extra{
+             flex-direction: row;
+             gap: 80px;
+         }
+
+         &__native{
+            gap: 15px;
+        }
+    
+        &__laguages{
+            gap: 15px;
+        }
+     
+         &__borders{
+            flex-direction: row;
+            justify-content: start;
+            gap: 10px;
+            margin-bottom: 0;
+         }
+
+         .contain__borders{
+            display: flex;
+            max-width: 60%;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+    }
+   
+}

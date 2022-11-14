@@ -1,0 +1,38 @@
+@use 'header';
+@use 'variables' as v;
+@use 'seccion_principal';
+@use 'card';
+@use 'seccion_pais';
+@use 'card_pais';
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  strong{
+    font-weight: 600;
+  }
+
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  body{
+    color: v.$Dark-Mode-Text;
+    background-color: v.$Dark-Mode-Background;
+  }
+
+main{
+    border: 1px solid gray;
+    min-height: 100vh;
+}
+
+.hidden{
+  display: none !important;
+}

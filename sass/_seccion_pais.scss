@@ -1,0 +1,35 @@
+@use 'variables' as v;
+
+.seccion__pais{
+    margin-top: 30px;
+    display: grid;
+    gap: 60px;
+
+    &-usage{
+        width: 90%;
+        margin:auto;
+    }
+
+    &-country{
+        width: 90%;
+        margin:auto;
+    }
+
+    .contain__icon-back{
+        width: 90px;
+        padding:5px 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-radius: 1px;
+        background-color: v.$Dark-Mode-Elements;
+        box-shadow: 0px 0px 8px 0px v.$Light-Mode-Text;
+        font-family: v.$Font-family-nunito;
+        font-weight: 600;
+
+        &:hover{
+            opacity:0.7;
+        }
+    }
+
+}

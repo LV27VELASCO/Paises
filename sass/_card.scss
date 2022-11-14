@@ -1,0 +1,39 @@
+@use 'variables' as v;
+
+.card{
+    width: 350px;
+    background-color: v.$Dark-Mode-Elements;
+    border-radius: 8px 8px 8px 8px;
+
+    &>img{
+        width: 100%;
+        height: 180px;
+        object-fit:fill;
+        object-position: center;
+        border-radius: 8px 8px 0 0;
+    }
+
+    &__information{
+        padding: 25px 20px;
+
+        &__extra{
+            display: grid;
+            gap: 8px;
+            font-family: v.$Font-family-nunito;
+            font-size: 15px;
+        }
+    }
+
+    &__title{
+        font-size: 18px;
+        font-family: v.$Font-family-nunito;
+        padding-bottom: 15px;
+    }
+
+    @media (min-width:1115px) {
+        &{
+            width:250px;
+        }
+    }
+    
+}
