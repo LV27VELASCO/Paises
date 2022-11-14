@@ -36,3 +36,8 @@ main{
 .hidden{
   display: none !important;
 }
+
+.lightModeBack{
+ background-color:v.$Light-Mode-Background;
+ color: v.$Light-Mode-Text;
+}

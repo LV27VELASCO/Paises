@@ -101,9 +101,11 @@ const retornarPaisCodigo=async()=>{
     .then(data=>{
         console.log(data)
 
-        const moneda=data.currencies;
-        const monedaIndex=moneda[Object.keys(moneda)[Object.keys(moneda).length-1]];
+        const moneda=data.currencies?data.currencies:null;
         let monedaHtml='';
+        if(moneda!==null){
+            const monedaIndex=moneda[Object.keys(moneda)[Object.keys(moneda).length-1]];
+        
         for (const key in moneda) {
             if(moneda[key]!==monedaIndex){
                 monedaHtml+=`${moneda[key].name}, `
@@ -111,7 +113,10 @@ const retornarPaisCodigo=async()=>{
                 monedaHtml+=`${moneda[key].name}`
             }
         }
-
+        }else{
+            monedaHtml='Sin informacion'
+        }
+        
 
         const lenguages=data.languages;
         const lenguagesIndex=lenguages[Object.keys(lenguages)[Object.keys(lenguages).length-1]];
@@ -190,11 +195,11 @@ if(id.length<4){
     
 }
 
-console.log($containPais.addEventListener('click',(e)=>{
+$containPais.addEventListener('click',(e)=>{
     if(e.target.closest('.link_border')){
         const id=e.target.closest('.link_border').children[0].dataset.id;
 
         localStorage.setItem('id',id)
     }
-}))
+})
 

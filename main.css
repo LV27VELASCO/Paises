@@ -284,4 +284,9 @@ main {
   display: none !important;
 }
 
+.lightModeBack {
+  background-color: hsl(0deg, 0%, 98%);
+  color: hsl(200deg, 15%, 8%);
+}
+
 /*# sourceMappingURL=main.css.map */
