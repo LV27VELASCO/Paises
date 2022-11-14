@@ -47,7 +47,7 @@ const retornarPaisNombre=async()=>{
         const fronteras=data.borders;
         let fronterasHtml=''
         for (const key in fronteras) {
-            fronterasHtml+=`<a href='#'><span class='border' data-id='${fronteras[key]}'>${fronteras[key].toLowerCase()}</span></a>`
+            fronterasHtml+=`<a href='../Info_pais/pais.html'><span class='border' data-id='${fronteras[key]}'>${fronteras[key].toLowerCase()}</span></a>`
         }
 
         const nombreNativo=data.name.nativeName;
