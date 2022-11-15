@@ -3,10 +3,6 @@ const $containPais=document.getElementById('contain_pais')
 
 let id=localStorage.getItem('id')
 
-console.log(id.length)
-
-
-
 
 const retornarPaisNombre=async()=>{
 
@@ -87,6 +83,13 @@ const retornarPaisNombre=async()=>{
         `
         
         $containPais.innerHTML=pais
+        const isActive=localStorage.getItem('LingthMode')
+        if(isActive){
+    document.querySelector('body').classList.add('lingth_Back')
+    document.querySelector('.header__main').classList.add('lingth_Back')
+    document.querySelector('.contain__icon-back').classList.add('lingth_item')
+    document.querySelectorAll('.border').forEach(item=>item.classList.add('lingth_item'))
+        }
     })
     } catch (error) {
         
@@ -176,6 +179,14 @@ const retornarPaisCodigo=async()=>{
         `
         
         $containPais.innerHTML=pais
+
+    const isActive=localStorage.getItem('LingthMode')
+    if(isActive){
+    document.querySelector('body').classList.add('lingth_Back')
+    document.querySelector('.header__main').classList.add('lingth_Back')
+    document.querySelector('.contain__icon-back').classList.add('lingth_item')
+    document.querySelectorAll('.border').forEach(item=>item.classList.add('lingth_item'))
+    }
     })
     } catch (error) {
         
@@ -198,8 +209,46 @@ if(id.length<4){
 $containPais.addEventListener('click',(e)=>{
     if(e.target.closest('.link_border')){
         const id=e.target.closest('.link_border').children[0].dataset.id;
-
         localStorage.setItem('id',id)
     }
 })
 
+
+document.addEventListener('click',(e)=>{
+    if(e.target.closest('.header__darkmode')){
+        document.querySelector('body').classList.toggle('lingth_Back')
+
+        if(document.querySelector('body').classList.contains('lingth_Back')){
+            localStorage.setItem('LingthMode','active')
+        }else{
+            localStorage.removeItem('LingthMode')
+        }
+    }
+
+    const isActive=localStorage.getItem('LingthMode')
+
+    if(isActive){
+        document.querySelector('.header__main').classList.add('lingth_Back')
+        document.querySelector('.contain__icon-back').classList.add('lingth_item')
+        document.querySelectorAll('.border').forEach(item=>item.classList.add('lingth_item'))
+    }else{
+        document.querySelector('.header__main').classList.remove('lingth_Back')
+        document.querySelector('.contain__icon-back').classList.remove('lingth_item')
+        document.querySelectorAll('.border').forEach(item=>item.classList.remove('lingth_item'))
+    }
+})
+
+
+
+// const isActive=localStorage.getItem('LingthMode')
+
+// if(isActive){
+//     document.querySelector('.header__main').classList.add('lingth_Back')
+//     document.querySelector('.contain__icon-back').classList.add('lingth_item')
+//     document.querySelectorAll('.border').forEach(item=>item.classList.add('lingth_item'))
+// }else{
+//     document.querySelector('.header__main').classList.remove('lingth_Back')
+//     document.querySelector('body').classList.remove('lingth_Back')
+//     document.querySelector('.contain__icon-back').classList.remove('lingth_item')
+//     document.querySelectorAll('.border').forEach(item=>item.classList.remove('lingth_item'))
+// }

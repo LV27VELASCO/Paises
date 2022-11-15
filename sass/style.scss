@@ -24,8 +24,9 @@
   }
 
   body{
-    color: v.$Dark-Mode-Text;
     background-color: v.$Dark-Mode-Background;
+    color: v.$Dark-Mode-Text;
+    transition: background-color .5s ease-in-out;
   }
 
 main{
@@ -34,10 +35,21 @@ main{
 }
 
 .hidden{
-  display: none !important;
+  display: none;
 }
 
-.lightModeBack{
- background-color:v.$Light-Mode-Background;
- color: v.$Light-Mode-Text;
+.lingth_Back{
+  background-color: v.$Light-Mode-Background;
+  color: v.$Light-Mode-Text;
 }
+
+.lingth_Input{
+  color: v.$Light-Mode-Text !important;
+  background-color: v.$Light-Mode-Elements !important;
+}
+
+.lingth_item{
+  background-color: v.$Light-Mode-Elements !important;
+  font-weight: 600;
+}
+

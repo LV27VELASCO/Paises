@@ -34,6 +34,7 @@ const cargarPaises=async(e)=>{
                     `
                 })
                 $containerItems.innerHTML=paises
+
             })
             .catch(err=>console.log(err))
         } catch (error) {
@@ -74,6 +75,9 @@ const cargarPaises=async(e)=>{
         }    
     }
     
+    if(document.querySelector('body').classList.contains('lingth_Back')){
+        document.querySelectorAll('.card').forEach(item=>{item.classList.toggle('lingth_item')})
+     }
     
 }
 
@@ -81,6 +85,8 @@ $select.addEventListener('change',cargarPaises)
 
 
 const cargarPrimero=async()=>{
+
+
     try {
         await fetch(`https://restcountries.com/v2/all`)
         .then(res=>res.json())
@@ -89,7 +95,6 @@ const cargarPrimero=async()=>{
             let paises=''
             data.forEach(pais=>{
             
-                console.log(pais)
                 paises+=`
                 <a class='rutaCard' href='../Info_pais/pais.html'>
                 <div class='card' data-id='${pais.alpha3Code}'>
@@ -107,6 +112,14 @@ const cargarPrimero=async()=>{
                 `
             })
             $containerItems.innerHTML=paises
+
+        const isActive=localStorage.getItem('LingthMode')
+
+        if(isActive){
+        document.querySelector('body').classList.add('lingth_Back')
+        document.querySelector('.header__main').classList.add('lingth_Back')
+        document.querySelectorAll('.card').forEach(item=>{item.classList.add('lingth_item')})
+        }
         })
         .catch(err=>console.log(err))
     } catch (error) {
@@ -137,3 +150,47 @@ $containerItems.addEventListener('click',(e)=>{
         localStorage.setItem('id',id)
     }
 })
+
+
+// FUNCION PARA DARK MODE
+document.addEventListener('click',(e)=>{
+    if(e.target.closest('.header__darkmode')){
+        document.querySelector('body').classList.toggle('lingth_Back')
+
+        if(document.querySelector('body').classList.contains('lingth_Back')){
+            localStorage.setItem('LingthMode','active')
+        }else{
+            localStorage.removeItem('LingthMode')
+        }
+    }
+
+const isActive=localStorage.getItem('LingthMode')
+
+if(isActive){
+        document.querySelector('.header__main').classList.add('lingth_Back')
+        document.querySelectorAll('.card').forEach(item=>{item.classList.add('lingth_item')})
+        document.querySelector('.contain-search').classList.add('lingth_Input')
+        document.querySelector('.contain-select').classList.add('lingth_Input')
+        document.querySelector('.select').classList.add('lingth_Input')
+        document.querySelector('.search').classList.add('lingth_Input')
+}else{
+        document.querySelector('.header__main').classList.remove('lingth_Back')
+        document.querySelectorAll('.card').forEach(item=>{item.classList.remove('lingth_item')})
+        document.querySelector('.contain-search').classList.remove('lingth_Input')
+        document.querySelector('.contain-select').classList.remove('lingth_Input')
+        document.querySelector('.select').classList.remove('lingth_Input')
+        document.querySelector('.search').classList.remove('lingth_Input')
+}
+})
+
+const isActive=localStorage.getItem('LingthMode')
+
+if(isActive){
+        document.querySelector('body').classList.add('lingth_Back')
+        document.querySelector('.header__main').classList.add('lingth_Back')
+        document.querySelectorAll('.card').forEach(item=>{item.classList.add('lingth_item')})
+        document.querySelector('.contain-search').classList.add('lingth_Input')
+        document.querySelector('.contain-select').classList.add('lingth_Input')
+        document.querySelector('.select').classList.add('lingth_Input')
+        document.querySelector('.search').classList.add('lingth_Input')
+}

@@ -6,6 +6,8 @@
         top: 0;
         background-color: v.$Dark-Mode-Elements;
         z-index: 1;
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.200);
+        transition: background-color .5s ease-in-out;
     }
 
     &__contain{
@@ -23,6 +25,7 @@
         display: flex;
         align-items: center;
         gap: 6px;
+        cursor: pointer;
     }
 
 }

@@ -4,6 +4,8 @@
   top: 0;
   background-color: hsl(209deg, 23%, 22%);
   z-index: 1;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease-in-out;
 }
 .header__contain {
   display: flex;
@@ -19,6 +21,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  cursor: pointer;
 }
 
 .seccion__principal {
@@ -41,22 +44,28 @@
   font-size: 18px;
   padding: 8px 20px;
   background-color: hsl(209deg, 23%, 22%);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease-in-out;
 }
 .seccion__principal .contain-select {
   width: 55%;
   padding: 10px;
   height: 40px;
   border-radius: 8px;
+  font-weight: 600;
   background-color: hsl(209deg, 23%, 22%);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  transition: background-color 0.5s ease-in-out;
 }
 .seccion__principal .search {
+  color: hsl(0deg, 0%, 100%);
   font-size: 15px;
   border: none;
   width: 100%;
   outline: none;
-  color: hsl(0deg, 0%, 100%);
-  background-color: transparent;
+  background-color: hsl(209deg, 23%, 22%);
   height: 30px;
+  transition: background-color 0.5s ease-in-out;
 }
 .seccion__principal .select {
   width: 100%;
@@ -65,10 +74,10 @@
   outline: none;
   border-radius: 8px;
   font-size: 14px;
-  font-weight: 600;
-  color: hsl(0deg, 0%, 100%);
-  background-color: hsl(209deg, 23%, 22%);
   cursor: pointer;
+  background-color: hsl(209deg, 23%, 22%);
+  color: hsl(0deg, 0%, 100%);
+  transition: background-color 0.5s ease-in-out;
 }
 .seccion__principal-countryes {
   margin: auto;
@@ -97,6 +106,7 @@
   width: 350px;
   background-color: hsl(209deg, 23%, 22%);
   border-radius: 8px 8px 8px 8px;
+  transition: background-color 0.5s ease-in-out;
 }
 .card > img {
   width: 100%;
@@ -146,9 +156,10 @@
   gap: 8px;
   border-radius: 1px;
   background-color: hsl(209deg, 23%, 22%);
-  box-shadow: 0px 0px 8px 0px hsl(200deg, 15%, 8%);
+  box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.2);
   font-family: "Nunito Sans", sans-serif;
   font-weight: 600;
+  transition: background-color 0.5s ease-in-out;
 }
 .seccion__pais .contain__icon-back:hover {
   opacity: 0.7;
@@ -207,6 +218,7 @@
 }
 .card__pais .contain__borders {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 .card__pais .border {
@@ -214,6 +226,7 @@
   border-radius: 2px;
   background-color: hsl(209deg, 23%, 22%);
   box-shadow: 0px 0px 5px 0px hsl(200deg, 15%, 8%);
+  transition: background-color 0.5s ease-in-out;
 }
 .card__pais .link_border {
   animation: pulse 2s infinite;
@@ -271,8 +284,9 @@ a {
 }
 
 body {
-  color: hsl(0deg, 0%, 100%);
   background-color: hsl(207deg, 26%, 17%);
+  color: hsl(0deg, 0%, 100%);
+  transition: background-color 0.5s ease-in-out;
 }
 
 main {
@@ -281,12 +295,22 @@ main {
 }
 
 .hidden {
-  display: none !important;
+  display: none;
 }
 
-.lightModeBack {
-  background-color: hsl(0deg, 0%, 98%);
+.lingth_Back {
+  background-color: hsl(0deg, 0%, 100%);
   color: hsl(200deg, 15%, 8%);
+}
+
+.lingth_Input {
+  color: hsl(200deg, 15%, 8%) !important;
+  background-color: hsla(0deg, 0%, 85%, 0.937) !important;
+}
+
+.lingth_item {
+  background-color: hsla(0deg, 0%, 85%, 0.937) !important;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=main.css.map */

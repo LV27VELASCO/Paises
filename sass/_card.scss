@@ -4,6 +4,7 @@
     width: 350px;
     background-color: v.$Dark-Mode-Elements;
     border-radius: 8px 8px 8px 8px;
+    transition: background-color .5s ease-in-out;
 
     &>img{
         width: 100%;
