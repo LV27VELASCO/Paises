@@ -26,6 +26,9 @@
   gap: 6px;
   cursor: pointer;
 }
+.header__darkmode > h2 {
+  font-size: 0.95rem;
+}
 
 .seccion__principal {
   margin-top: 30px;

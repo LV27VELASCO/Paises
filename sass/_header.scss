@@ -30,6 +30,10 @@
         align-items: center;
         gap: 6px;
         cursor: pointer;
+
+        &>h2{
+            font-size: 0.95rem;
+        }
     }
 
 }
