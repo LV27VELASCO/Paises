@@ -20,7 +20,7 @@ const cargarPaises=async(e)=>{
                     paises+=`
                     <a class='rutaCard' href='../Info_pais/pais.html'>
                     <div class='card' data-id='${pais.name.common}'>
-                    <img src='${pais.flags.png}'>
+                    <img src='${pais.flags.png} alt='bandera de ${pais.name}'>
                     <footer class='card__information'>
                     <h4 class='card__title'>${pais.name}</h4>
                     <div class='card__information__extra'>
@@ -54,7 +54,7 @@ const cargarPaises=async(e)=>{
                     paises+=`
                     <a class='rutaCard' href='../Info_pais/pais.html'>
                     <div class='card' data-id='${pais.name.common}'>
-                    <img src='${pais.flags.png}'>
+                    <img src='${pais.flags.png}' alt='bandera de ${pais.name.common}'>
                     <footer class='card__information'>
                     <h4 class='card__title'>${pais.name.common}</h4>
                     <div class='card__information__extra'>
@@ -98,7 +98,7 @@ const cargarPrimero=async()=>{
                 paises+=`
                 <a class='rutaCard' href='../Info_pais/pais.html'>
                 <div class='card' data-id='${pais.alpha3Code}'>
-                <img src='${pais.flags.png}'>
+                <img src='${pais.flags.png}' alt='bandera de ${pais.name}'>
                 <footer class='card__information'>
                 <h4 class='card__title'>${pais.name}</h4>
                 <div class='card__information__extra'>

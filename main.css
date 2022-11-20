@@ -17,6 +17,9 @@
   font-size: 14px;
   font-family: "Nunito Sans", sans-serif;
 }
+.header__contain > h1 {
+  font-size: 1.4rem;
+}
 .header__darkmode {
   display: flex;
   align-items: center;

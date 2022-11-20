@@ -19,6 +19,10 @@
         width: 90%;
         font-size: 14px;
         font-family: v.$Font-family-nunito;
+
+        &>h1{
+            font-size: 1.4rem;
+        }
     }
 
     &__darkmode{
