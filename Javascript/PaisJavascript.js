@@ -56,7 +56,7 @@ const retornarPaisNombre=async()=>{
         let pais=`
             <div class='card__pais'>
                 <div class='card__pais__img'>
-                    <img src='${data.flags.png}'>
+                    <img src='${data.flags.png}' alt='bandera de ${data.name.common}'>
                 </div>
                 <footer class='card__pais__information'>
                     <h4 class='card__pais__title'>${data.name.common}</h4>
@@ -152,7 +152,7 @@ const retornarPaisCodigo=async()=>{
         let pais=`
             <div class='card__pais'>
                 <div class='card__pais__img'>
-                    <img src='${data.flags.png}'>
+                    <img src='${data.flags.png}' alt='bandera de ${data.name}'>
                 </div>
                 <footer class='card__pais__information'>
                 <h4 class='card__pais__title'>${data.name}</h4>
